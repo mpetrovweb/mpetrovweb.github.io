@@ -1,0 +1,1023 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.eldom-wrapper {
+    --eldom-red: #e30613;
+    --eldom-red-dark: #bf0711;
+    --eldom-black: #171717;
+    --eldom-text: #262626;
+    --eldom-muted: #6e6e6e;
+    --eldom-line: #e9e9e9;
+    --eldom-soft: #f6f6f6;
+    --eldom-white: #ffffff;
+    --eldom-radius: 22px;
+    --eldom-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Raleway", Arial, sans-serif;
+    color: var(--eldom-text);
+    background: var(--eldom-white);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.eldom-wrapper,
+.eldom-wrapper * {
+    box-sizing: border-box;
+}
+
+.eldom-wrapper img {
+    display: block;
+    max-width: 100%;
+}
+
+.eldom-wrapper a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.eldom-wrapper h1,
+.eldom-wrapper h2,
+.eldom-wrapper h3,
+.eldom-wrapper p,
+.eldom-wrapper ul {
+    margin-top: 0;
+}
+
+.eldom-wrapper .eldom-container {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+.eldom-wrapper .eldom-section {
+    padding: 86px 0;
+}
+
+.eldom-wrapper .eldom-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 16px;
+    color: var(--eldom-red);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.eldom-wrapper .eldom-kicker::before {
+    content: "";
+    width: 30px;
+    height: 3px;
+    border-radius: 999px;
+    background: currentColor;
+}
+
+.eldom-wrapper .eldom-section-title {
+    margin-bottom: 18px;
+    color: var(--eldom-black);
+    font-size: clamp(30px, 4.1vw, 52px);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    font-weight: 800;
+}
+
+.eldom-wrapper .eldom-lead {
+    max-width: 760px;
+    margin-bottom: 0;
+    color: var(--eldom-muted);
+    font-size: clamp(17px, 2vw, 20px);
+    line-height: 1.7;
+}
+
+/* HERO */
+.eldom-wrapper .eldom-hero {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 86% 16%, rgba(227, 6, 19, 0.10), transparent 36%),
+        var(--eldom-soft);
+    color: var(--eldom-text);
+}
+
+.eldom-wrapper .eldom-hero::after {
+    content: "";
+    position: absolute;
+    right: -140px;
+    bottom: -210px;
+    width: 480px;
+    height: 480px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 50%;
+}
+
+.eldom-wrapper .eldom-hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(390px, 0.98fr);
+    align-items: center;
+    gap: 58px;
+    min-height: 650px;
+    padding: 76px 0;
+}
+
+.eldom-wrapper .eldom-brand {
+    width: 218px;
+    margin-bottom: 46px;
+}
+
+.eldom-wrapper .eldom-brand img {
+    width: 100%;
+    height: auto;
+}
+
+.eldom-wrapper .eldom-hero h1 {
+    max-width: 710px;
+    margin-bottom: 24px;
+    color: var(--eldom-black);
+    font-size: clamp(39px, 5vw, 60px);
+    line-height: 1.02;
+    letter-spacing: -0.05em;
+    font-weight: 800;
+}
+
+.eldom-wrapper .eldom-hero h1 span {
+    color: var(--eldom-red);
+}
+
+.eldom-wrapper .eldom-hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 32px;
+    padding: 0;
+    list-style: none;
+}
+
+.eldom-wrapper .eldom-hero-tags li {
+    margin: 0;
+    padding: 10px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    border-radius: 999px;
+    color: #444;
+    background: rgba(255, 255, 255, 0.72);
+    font-size: 14px;
+    font-weight: 700;
+    backdrop-filter: blur(4px);
+}
+
+
+
+.eldom-wrapper .eldom-hero-product {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 460px;
+}
+
+.eldom-wrapper .eldom-product-orbit {
+    position: absolute;
+    width: 430px;
+    height: 430px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 50%;
+}
+
+.eldom-wrapper .eldom-product-orbit::before,
+.eldom-wrapper .eldom-product-orbit::after {
+    content: "";
+    position: absolute;
+    inset: 48px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+}
+
+.eldom-wrapper .eldom-product-orbit::after {
+    inset: 103px;
+}
+
+.eldom-wrapper .eldom-hero-product-main {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 590px;
+    filter: drop-shadow(0 30px 35px rgba(0, 0, 0, 0.28));
+}
+
+.eldom-wrapper .eldom-bulgaria-badge {
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    bottom: 0;
+    width: 132px;
+    height: 132px;
+    max-width: none;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    filter: drop-shadow(0 14px 20px rgba(0, 0, 0, 0.25));
+}
+
+/* FEATURE IMAGE STRIP */
+.eldom-wrapper .eldom-feature-strip {
+    background: var(--eldom-red);
+}
+
+.eldom-wrapper .eldom-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    align-items: stretch;
+}
+
+.eldom-wrapper .eldom-feature-image {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    border-left: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.eldom-wrapper .eldom-feature-image:last-child {
+    border-right: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.eldom-wrapper .eldom-feature-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* INTRO */
+.eldom-wrapper .eldom-intro {
+    background: var(--eldom-white);
+}
+
+.eldom-wrapper .eldom-intro-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.eldom-wrapper .eldom-intro-sticky {
+    position: sticky;
+    top: 30px;
+}
+
+.eldom-wrapper .eldom-intro-copy {
+    display: grid;
+    gap: 18px;
+}
+
+.eldom-wrapper .eldom-intro-copy p {
+    margin-bottom: 0;
+    color: #555;
+    font-size: 17px;
+}
+
+.eldom-wrapper .eldom-highlight {
+    margin-top: 18px;
+    padding: 24px 26px;
+    border-left: 4px solid var(--eldom-red);
+    border-radius: 0 16px 16px 0;
+    background: var(--eldom-soft);
+    color: #404040;
+    font-weight: 700;
+}
+
+/* DETAIL CARDS */
+.eldom-wrapper .eldom-details {
+    background: var(--eldom-soft);
+}
+
+.eldom-wrapper .eldom-details-head {
+    margin-bottom: 46px;
+}
+
+.eldom-wrapper .eldom-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.eldom-wrapper .eldom-detail-card {
+    position: relative;
+    overflow: hidden;
+    padding: 34px 34px 30px;
+    border: 1px solid var(--eldom-line);
+    border-radius: var(--eldom-radius);
+    background: var(--eldom-white);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.035);
+}
+
+.eldom-wrapper .eldom-detail-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--eldom-red);
+}
+
+.eldom-wrapper .eldom-detail-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background: rgba(227, 6, 19, 0.08);
+    color: var(--eldom-red);
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.eldom-wrapper .eldom-detail-card h3 {
+    margin-bottom: 18px;
+    color: var(--eldom-black);
+    font-size: 22px;
+    line-height: 1.25;
+    font-weight: 800;
+}
+
+.eldom-wrapper .eldom-detail-card p {
+    margin-bottom: 14px;
+    color: #5d5d5d;
+}
+
+.eldom-wrapper .eldom-detail-card p:last-child {
+    margin-bottom: 0;
+}
+
+.eldom-wrapper .eldom-detail-card ul {
+    margin-bottom: 0;
+    padding-left: 20px;
+    color: #5d5d5d;
+}
+
+.eldom-wrapper .eldom-detail-card li {
+    margin-bottom: 10px;
+    padding-left: 4px;
+}
+
+.eldom-wrapper .eldom-detail-card li:last-child {
+    margin-bottom: 0;
+}
+
+.eldom-wrapper .eldom-detail-card li::marker {
+    color: var(--eldom-red);
+}
+
+/* TECHNICAL / SVG */
+.eldom-wrapper .eldom-technical {
+    background: var(--eldom-white);
+}
+
+.eldom-wrapper .eldom-tech-panel {
+    margin-top: 40px;
+    padding: 34px;
+    border: 1px solid var(--eldom-line);
+    border-radius: var(--eldom-radius);
+    background: var(--eldom-white);
+    box-shadow: var(--eldom-shadow);
+}
+
+.eldom-wrapper .eldom-tech-panel img {
+    width: 100%;
+    height: auto;
+}
+
+/* MODELS */
+.eldom-wrapper .eldom-models {
+    background: var(--eldom-soft);
+    color: var(--eldom-text);
+}
+
+.eldom-wrapper .eldom-models .eldom-kicker {
+    color: var(--eldom-red);
+}
+
+.eldom-wrapper .eldom-models .eldom-section-title {
+    color: var(--eldom-black);
+}
+
+.eldom-wrapper .eldom-models .eldom-lead {
+    color: var(--eldom-muted);
+}
+
+.eldom-wrapper .eldom-model-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 46px;
+}
+
+.eldom-wrapper .eldom-model-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid var(--eldom-line);
+    border-radius: 18px;
+    background: var(--eldom-white);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.04);
+}
+
+.eldom-wrapper .eldom-model-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 210px;
+    padding: 16px;
+    background: var(--eldom-white);
+}
+
+.eldom-wrapper .eldom-model-image img {
+    width: 100%;
+    height: auto;
+    max-height: 190px;
+    object-fit: contain;
+}
+
+.eldom-wrapper .eldom-model-copy {
+    flex: 1;
+    padding: 20px 18px 22px;
+}
+
+.eldom-wrapper .eldom-model-copy h3 {
+    margin-bottom: 14px;
+    color: var(--eldom-black);
+    font-size: 15px;
+    line-height: 1.45;
+    font-weight: 700;
+}
+
+.eldom-wrapper .eldom-model-code {
+    margin-bottom: 0;
+    color: var(--eldom-red);
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* CTA */
+.eldom-wrapper .eldom-cta {
+    position: relative;
+    overflow: hidden;
+    padding: 66px 0;
+    background: var(--eldom-red);
+    color: var(--eldom-white);
+}
+
+.eldom-wrapper .eldom-cta::before {
+    content: "";
+    position: absolute;
+    left: -110px;
+    top: -170px;
+    width: 360px;
+    height: 360px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+}
+
+.eldom-wrapper .eldom-cta-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.eldom-wrapper .eldom-cta h2 {
+    max-width: 760px;
+    margin-bottom: 0;
+    color: var(--eldom-white);
+    font-size: clamp(28px, 4vw, 46px);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+}
+
+
+
+/* TABLET */
+@media (max-width: 1024px) {
+    .eldom-wrapper .eldom-container {
+        width: min(100% - 40px, 920px);
+    }
+
+    .eldom-wrapper .eldom-section {
+        padding: 72px 0;
+    }
+
+    .eldom-wrapper .eldom-hero-inner {
+        grid-template-columns: 1fr 0.95fr;
+        gap: 28px;
+        min-height: 590px;
+        padding: 64px 0;
+    }
+
+    .eldom-wrapper .eldom-product-orbit {
+        width: 330px;
+        height: 330px;
+    }
+
+    .eldom-wrapper .eldom-bulgaria-badge {
+        width: 108px;
+        height: 108px;
+    }
+
+    .eldom-wrapper .eldom-feature-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .eldom-wrapper .eldom-feature-image:nth-child(3) {
+        border-right: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .eldom-wrapper .eldom-feature-image:nth-child(n+4) {
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .eldom-wrapper .eldom-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .eldom-wrapper .eldom-intro-sticky {
+        position: static;
+    }
+
+    .eldom-wrapper .eldom-model-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+@media (max-width: 720px) {
+    .eldom-wrapper {
+        font-size: 15px;
+    }
+
+    .eldom-wrapper .eldom-container {
+        width: min(100% - 28px, 620px);
+    }
+
+    .eldom-wrapper .eldom-section {
+        padding: 56px 0;
+    }
+
+    .eldom-wrapper .eldom-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 26px;
+        min-height: auto;
+        padding: 44px 0 50px;
+    }
+
+    .eldom-wrapper .eldom-brand {
+        width: 166px;
+        margin-bottom: 32px;
+    }
+
+    .eldom-wrapper .eldom-hero h1 {
+        margin-bottom: 20px;
+        font-size: clamp(36px, 11vw, 54px);
+    }
+
+    .eldom-wrapper .eldom-hero-tags {
+        margin-bottom: 26px;
+    }
+
+    .eldom-wrapper .eldom-hero-tags li {
+        padding: 8px 11px;
+        font-size: 12px;
+    }
+
+    .eldom-wrapper .eldom-hero-product {
+        min-height: 330px;
+    }
+
+    .eldom-wrapper .eldom-product-orbit {
+        width: 290px;
+        height: 290px;
+    }
+
+    .eldom-wrapper .eldom-bulgaria-badge {
+        right: 4px;
+        bottom: 2px;
+        width: 92px;
+        height: 92px;
+    }
+
+    .eldom-wrapper .eldom-feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .eldom-wrapper .eldom-feature-image:nth-child(odd) {
+        border-left: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .eldom-wrapper .eldom-feature-image:nth-child(even) {
+        border-right: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .eldom-wrapper .eldom-feature-image:nth-child(n+3) {
+        border-top: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    .eldom-wrapper .eldom-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .eldom-wrapper .eldom-detail-card {
+        padding: 28px 24px 26px;
+    }
+
+    .eldom-wrapper .eldom-tech-panel {
+        margin-top: 28px;
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .eldom-wrapper .eldom-model-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 34px;
+    }
+
+    .eldom-wrapper .eldom-model-image {
+        min-height: 155px;
+        padding: 10px;
+    }
+
+    .eldom-wrapper .eldom-model-copy {
+        padding: 16px 14px 18px;
+    }
+
+    .eldom-wrapper .eldom-model-copy h3 {
+        font-size: 13px;
+    }
+
+    .eldom-wrapper .eldom-model-code {
+        font-size: 12px;
+    }
+
+    .eldom-wrapper .eldom-cta {
+        padding: 52px 0;
+    }
+
+    .eldom-wrapper .eldom-cta-inner {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 430px) {
+    .eldom-wrapper .eldom-feature-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .eldom-wrapper .eldom-model-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .eldom-wrapper .eldom-model-image {
+        min-height: 210px;
+    }
+
+    .eldom-wrapper .eldom-model-copy h3 {
+        font-size: 15px;
+    }
+
+    .eldom-wrapper .eldom-model-code {
+        font-size: 14px;
+    }
+}
+</style>
+
+<div class="eldom-wrapper">
+
+    <section class="eldom-hero">
+        <div class="eldom-container eldom-hero-inner">
+            <div class="eldom-hero-copy">
+                <h1>Стенни конвектори с електронно управление и <span>Wi-Fi</span></h1>
+
+                <ul class="eldom-hero-tags">
+                    <li>Wi-Fi управление</li>
+                    <li>SLIM дизайн — 59 мм</li>
+                    <li>IP 24</li>
+                    <li>Безшумна работа</li>
+                </ul>
+            </div>
+
+            <div class="eldom-hero-product">
+                <div class="eldom-product-orbit" aria-hidden="true"></div>
+
+                <img
+                    class="eldom-hero-product-main"
+                    src="https://eldominvest.com/otoplenie/media/cache/9a/da/thumb6_convector-2p0kw_NHC.png"
+                    alt="Стенен конвектор с електронно управление и Wi-Fi ELDOM RH20NW, 2000 W"
+                    width="600"
+                    height="400"
+                    fetchpriority="high"
+                >
+
+                <img
+                    class="eldom-bulgaria-badge"
+                    src="https://eldominvest.com/otoplenie/media/graphics/81/d0/made_in_bulgaria_7.png"
+                    alt="Произведен в България - 7 години пълна гаранция"
+                    width="399"
+                    height="399"
+                >
+            </div>
+        </div>
+    </section>
+
+    <section class="eldom-feature-strip" aria-label="Основни предимства">
+        <div class="eldom-container">
+            <div class="eldom-feature-grid">
+                <div class="eldom-feature-image">
+                    <img
+                        src="https://eldominvest.com/otoplenie/media/graphics/3b/13/acc_10.png"
+                        alt="Оптимална конвекция за максимален комфорт"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="eldom-feature-image">
+                    <img
+                        src="https://eldominvest.com/otoplenie/media/graphics/16/c5/acc_2.png"
+                        alt="Супер икономични - спестяват енергия и пари"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="eldom-feature-image">
+                    <img
+                        src="https://eldominvest.com/otoplenie/media/graphics/a1/9b/acc_3.png"
+                        alt="Wi-Fi управление от всяка точка на света"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="eldom-feature-image">
+                    <img
+                        src="https://eldominvest.com/otoplenie/media/graphics/b5/a4/acc_4.png"
+                        alt="Многофункционално меню"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="eldom-feature-image">
+                    <img
+                        src="https://eldominvest.com/otoplenie/media/graphics/d6/41/acc_11.png"
+                        alt="SLIM design - дебелина само 59 мм"
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="eldom-feature-image">
+                    <img
+                        src="https://eldominvest.com/otoplenie/media/graphics/ea/da/acc_5.png"
+                        alt="Сигурност - различни защити"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="eldom-section eldom-intro">
+        <div class="eldom-container eldom-intro-grid">
+            <div class="eldom-intro-sticky">
+                <div class="eldom-kicker">Интелигентен комфорт</div>
+                <h2 class="eldom-section-title">Интелигентно електронно управление и Wi-Fi</h2>
+                <p class="eldom-lead">Бърз и лесен достъп до уреда от всяка точка на света.</p>
+            </div>
+
+            <div class="eldom-intro-copy">
+                <p>
+                    Пълен контрол над работата на уреда - предоставя не просто възможност за включване и изключване,
+                    а дистанционно управление на абсолютно всички работни променливи и опции, предвидени в
+                    многофункционалното меню.
+                </p>
+
+                <p>
+                    Актуално състояние и статистически отчети за потреблението - системата следи и визуализира всички
+                    важни параметри, измервани от контролерите на уреда.
+                </p>
+
+                <p>Елегантен дисплей и интуитивно многофункционално меню.</p>
+
+                <div class="eldom-highlight">
+                    Безплатно приложение MyELDOM в Google Play и App Store.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="eldom-section eldom-details">
+        <div class="eldom-container">
+            <div class="eldom-details-head">
+                <div class="eldom-kicker">Допълнителни характеристики</div>
+                <h2 class="eldom-section-title">Комфорт, икономичност и надеждна защита</h2>
+            </div>
+
+            <div class="eldom-detail-grid">
+
+
+                <article class="eldom-detail-card">
+                    <div class="eldom-detail-number">01</div>
+                    <h3>Супер икономични</h3>
+                    <ul>
+                        <li>
+                            Седмичен програматор - програмирате режима на работа неограничено напред във времето, по дни
+                            и часове, с различна температура според Вашия индивидуален режим или според нискотарифните
+                            часови пояси.
+                        </li>
+                        <li>
+                            Функция „Отворен прозорец” - функция за разпознаване на отворен прозорец или врата, която
+                            временно изключва нагревателя и спестява значителни разходи на електроенергия.
+                        </li>
+                        <li>
+                            Режим „Сън” - този режим плавно понижава настроената температура в рамките на 2 часа и
+                            автоматично възстановява стандартния режим след още 5 часа.
+                        </li>
+                        <li>Режим „Отложен старт”.</li>
+                        <li>Прецизен електронен терморегулатор.</li>
+                    </ul>
+                </article>
+
+                 <article class="eldom-detail-card">
+                    <div class="eldom-detail-number">02</div>
+                    <h3>Защити</h3>
+                    <ul>
+                        <li>Защита при падане - автоматично се прекъсва електрическата верига.</li>
+                        <li>
+                            Защита от влага клас IP 24 - при спазване на инструкциите за експлоатация, тези отоплителни
+                            уреди безпроблемно могат да се монтират дори и в баня.
+                        </li>
+                        <li>
+                            Защита против замръзване - автоматично се включва уреда за кратко при температура в
+                            помещението под 7°С.
+                        </li>
+                        <li>
+                            Защита при прекъсване на ел. захранване - електронното управление запазва зададените
+                            настройки повече от 24 часа.
+                        </li>
+                        <li>Двустепенна защита от прегряване.</li>
+                        <li>Родителски контрол.</li>
+                    </ul>
+                </article>
+
+
+                <article class="eldom-detail-card">
+                    <div class="eldom-detail-number">03</div>
+                    <h3>Дълъг живот</h3>
+                    <p>
+                        По-добрият топлообмен на радиаторите води до намаляване на температурното натоварване на
+                        нагревателните елементи — най-добрата гаранция за дълъг експлоатационен живот на уреда.
+                    </p>
+                </article>
+
+
+                <article class="eldom-detail-card">
+                    <div class="eldom-detail-number">04</div>
+                    <h3>Оптимална конвекция за максимален комфорт</h3>
+                    <p>
+                        Дължината на конвектора и подобрената му геометрия осигуряват циркулацията на по-голям въздушен
+                        поток, което води до по-бързото загряване на въздуха в помещението.
+                    </p>
+                </article>
+
+
+                <article class="eldom-detail-card">
+                    <div class="eldom-detail-number">05</div>
+                    <h3>Удобство</h3>
+                    <ul>
+                        <li>SLIM дизайн - дебелина само 59 мм</li>
+                        <li>Можете да следите изразходваната от уреда електроенергия за последните седем дни.</li>
+                        <li>
+                            Съхраняване на информация за средната стайна температура по часове от последните четири дни.
+                        </li>
+                        <li>Интерфейс на различни езикови версии.</li>
+                        <li>Определяне яркостта на дисплея и плавно регулиране на силата на осветеност.</li>
+                        <li>Безшумна работа.</li>
+                    </ul>
+                </article>
+            
+
+            </div>
+        </div>
+    </section>
+
+    <section class="eldom-section eldom-technical">
+        <div class="eldom-container">
+            <div class="eldom-kicker">Размери и модели</div>
+            <h2 class="eldom-section-title">Изберете подходящия конвектор за Вашето помещение</h2>
+
+            <div class="eldom-tech-panel">
+                <img
+                    src="https://eldominvest.com/otoplenie/media/graphics/b1/14/LP_Desktop_WallHeaters_Slim_Table.svg"
+                    alt="Размери и характеристики на стенните конвектори ELDOM"
+                    loading="lazy"
+                >
+            </div>
+        </div>
+    </section>
+
+    <section class="eldom-section eldom-models">
+        <div class="eldom-container">
+            <div class="eldom-kicker">Гама</div>
+            <h2 class="eldom-section-title">Стенни конвектори с електронно управление и Wi-Fi</h2>
+
+            <div class="eldom-model-grid">
+
+                <article class="eldom-model-card">
+                    <div class="eldom-model-image">
+                        <img
+                            src="https://eldominvest.com/otoplenie/media/cache/4b/fc/thumb6_convector-1kw_NHC.png"
+                            alt="Стенен конвектор с електронно управление и Wi-Fi ELDOM RH10NW, 1000 W"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="eldom-model-copy">
+                        <h3>Стенен конвектор с електронно управление и Wi-Fi</h3>
+                        <p class="eldom-model-code">ELDOM RH10NW, 1000 W</p>
+                    </div>
+                </article>
+
+                <article class="eldom-model-card">
+                    <div class="eldom-model-image">
+                        <img
+                            src="https://eldominvest.com/otoplenie/media/cache/de/db/thumb6_convector-1p5kw_NHC.png"
+                            alt="Стенен конвектор с електронно управление и Wi-Fi ELDOM RH15NW, 1500 W"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="eldom-model-copy">
+                        <h3>Стенен конвектор с електронно управление и Wi-Fi</h3>
+                        <p class="eldom-model-code">ELDOM RH15NW, 1500 W</p>
+                    </div>
+                </article>
+
+                <article class="eldom-model-card">
+                    <div class="eldom-model-image">
+                        <img
+                            src="https://eldominvest.com/otoplenie/media/cache/9a/da/thumb6_convector-2p0kw_NHC.png"
+                            alt="Стенен конвектор с електронно управление и Wi-Fi ELDOM RH20NW, 2000 W"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="eldom-model-copy">
+                        <h3>Стенен конвектор с електронно управление и Wi-Fi</h3>
+                        <p class="eldom-model-code">ELDOM RH20NW, 2000 W</p>
+                    </div>
+                </article>
+
+                <article class="eldom-model-card">
+                    <div class="eldom-model-image">
+                        <img
+                            src="https://eldominvest.com/otoplenie/media/cache/58/44/thumb6_convector-2p5kw_NHC.png"
+                            alt="Стенен конвектор с електронно управление и Wi-Fi ELDOM RH25NW, 2500 W"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="eldom-model-copy">
+                        <h3>Стенен конвектор с електронно управление и Wi-Fi</h3>
+                        <p class="eldom-model-code">ELDOM RH25NW, 2500 W</p>
+                    </div>
+                </article>
+
+                <article class="eldom-model-card">
+                    <div class="eldom-model-image">
+                        <img
+                            src="https://eldominvest.com/otoplenie/media/cache/67/1d/thumb6_convector-3kw_NHC.png"
+                            alt="Стенен конвектор с електронно управление и Wi-Fi ELDOM RH30NW, 3000 W"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="eldom-model-copy">
+                        <h3>Стенен конвектор с електронно управление и Wi-Fi</h3>
+                        <p class="eldom-model-code">ELDOM RH30NW, 3000 W</p>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="eldom-cta">
+        <div class="eldom-container eldom-cta-inner">
+            <h2>Интелигентно отопление и комфорт с ELDOM</h2>
+        </div>
+    </section>
+
+</div>
