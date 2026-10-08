@@ -1,0 +1,543 @@
+<style>
+.product-description__template {
+    --eldom-red: #fc6464;
+    --eldom-gray: #f0f0f0;
+    --eldom-text: #555;
+    --eldom-dark: #222;
+    --eldom-white: #fff;
+    --eldom-line: rgba(0, 0, 0, 0.10);
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--eldom-text);
+    font-family: inherit;
+    line-height: 1.55;
+}
+
+.product-description__template,
+.product-description__template * {
+    box-sizing: border-box;
+}
+
+.product-description__template img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.product-description__template figure,
+.product-description__template p,
+.product-description__template h1,
+.product-description__template h2,
+.product-description__template h3,
+.product-description__template ul {
+    margin-top: 0;
+}
+
+.product-description__template .background-gray {
+    background: var(--eldom-gray);
+    border-radius: 30px;
+    max-width: 1070px;
+    margin: 0 auto;
+    padding: 36px 40px 44px;
+}
+
+.product-description__template .grid-container {
+    width: 100%;
+}
+
+.product-description__template .color-red {
+    color: var(--eldom-red);
+}
+
+.product-description__template .background-red {
+    background: var(--eldom-red);
+}
+
+.product-description__template .text-center {
+    text-align: center;
+}
+
+.product-description__template .text-bold {
+    font-weight: 700;
+}
+
+.product-description__template .product-description__source-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.product-description__template .product-description__source-logo-inner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 22px;
+    border-radius: 14px;
+    background: var(--eldom-red);
+}
+
+.product-description__template .product-description__source-logo img {
+    width: 190px;
+    max-width: 100%;
+}
+
+.product-description__template .product-description__brand {
+    margin: 0 0 34px;
+    color: var(--eldom-dark);
+    font-size: clamp(25px, 4vw, 38px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+.product-description__template .product-description__brand .color-red {
+    margin-right: 8px;
+}
+
+.product-description__template .product-description__intro {
+    max-width: 760px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.product-description__template .product-description__intro h1 {
+    margin-bottom: 16px;
+    color: var(--eldom-dark);
+    font-size: clamp(26px, 4vw, 40px);
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+.product-description__template .product-description__intro p {
+    margin-bottom: 0;
+    font-size: 17px;
+}
+
+.product-description__template .product-description__hero {
+    position: relative;
+    overflow: hidden;
+    max-width: 850px;
+    min-height: 330px;
+    margin: 0 auto 38px;
+    padding: 28px;
+    border-radius: 20px;
+    background: var(--eldom-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-description__template .product-description__hero-product {
+    width: 100%;
+    max-width: 650px;
+    object-fit: contain;
+}
+
+.product-description__template .product-description__badge {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    width: 118px;
+    height: 118px;
+    max-width: none;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+}
+
+.product-description__template .product-description__feature-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 10px;
+    margin: 0 0 42px;
+}
+
+.product-description__template .product-description__feature-grid img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.product-description__template .product-description__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 36px;
+    align-items: center;
+    padding: 22px 0;
+}
+
+.product-description__template .product-description__media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 270px;
+    padding: 30px;
+    overflow: hidden;
+    border-radius: 30px;
+    background: var(--eldom-white);
+}
+
+.product-description__template .product-description__feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(220px, 72%);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: rgba(252, 100, 100, 0.10);
+    color: var(--eldom-red);
+}
+
+.product-description__template .product-description__feature-icon svg {
+    width: 58%;
+    height: 58%;
+    overflow: visible;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.product-description__template .product-description__feature-icon .eldom-fill {
+    fill: currentColor;
+    stroke: none;
+}
+
+.product-description__template .product-description__copy {
+    text-align: center;
+}
+
+.product-description__template .product-description__heading {
+    display: inline-block;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: var(--eldom-dark);
+    font-size: 25px;
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+.product-description__template .product-description__text {
+    max-width: 500px;
+    margin: 0 auto;
+    color: var(--eldom-text);
+    font-size: 16px;
+}
+
+.product-description__template .product-description__text p {
+    margin-bottom: 12px;
+}
+
+.product-description__template .product-description__text p:last-child {
+    margin-bottom: 0;
+}
+
+.product-description__template .product-description__text ul {
+    margin: 0;
+    padding-left: 22px;
+    text-align: left;
+}
+
+.product-description__template .product-description__text li {
+    margin-bottom: 9px;
+}
+
+.product-description__template .product-description__text li:last-child {
+    margin-bottom: 0;
+}
+
+.product-description__template hr {
+    height: 1px;
+    margin: 20px 0;
+    border: 0;
+    background: var(--eldom-line);
+}
+
+.product-description__template .product-description__technical {
+    margin-top: 28px;
+    padding: 28px;
+    border-radius: 20px;
+    background: var(--eldom-white);
+}
+
+.product-description__template .product-description__technical h2 {
+    margin-bottom: 24px;
+    color: var(--eldom-dark);
+    font-size: clamp(24px, 3.4vw, 32px);
+    line-height: 1.2;
+    text-align: center;
+}
+
+.product-description__template .product-description__technical img {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .product-description__template .background-gray {
+        padding: 30px 26px 36px;
+    }
+
+    .product-description__template .product-description__feature-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .product-description__template .product-description__row {
+        gap: 24px;
+    }
+
+    }
+
+@media (max-width: 680px) {
+    .product-description__template .background-gray {
+        border-radius: 20px;
+        padding: 24px 16px 28px;
+    }
+
+    .product-description__template .product-description__source-logo img {
+        width: 155px;
+    }
+
+    .product-description__template .product-description__brand {
+        margin-bottom: 26px;
+    }
+
+    .product-description__template .product-description__intro {
+        margin-bottom: 22px;
+    }
+
+    .product-description__template .product-description__hero {
+        min-height: 230px;
+        margin-bottom: 28px;
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .product-description__template .product-description__badge {
+        right: 12px;
+        bottom: 12px;
+        width: 78px;
+        height: 78px;
+    }
+
+    .product-description__template .product-description__feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+
+    .product-description__template .product-description__feature-grid img {
+        border-radius: 12px;
+    }
+
+    .product-description__template .product-description__row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 16px 0;
+    }
+
+    .product-description__template .product-description__row--reverse .product-description__copy {
+        order: 2;
+    }
+
+    .product-description__template .product-description__row--reverse .product-description__media {
+        order: 1;
+    }
+
+    .product-description__template .product-description__media {
+        min-height: 210px;
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .product-description__template .product-description__feature-icon {
+        width: min(170px, 62vw);
+    }
+
+    .product-description__template .product-description__heading {
+        margin-bottom: 15px;
+        padding: 12px 15px;
+        font-size: 21px;
+    }
+
+    .product-description__template .product-description__text {
+        font-size: 15px;
+    }
+
+    .product-description__template hr {
+        margin: 14px 0;
+    }
+
+    .product-description__template .product-description__technical {
+        padding: 16px;
+    }
+
+    }
+
+@media (max-width: 420px) {
+    }
+</style>
+<div class="product-description__template">
+<div class="background-gray">
+<div class="grid-container">
+<div class="product-description__source-logo">
+<div class="product-description__source-logo-inner">
+<img alt="ELDOM" src="https://eldominvest.com/otoplenie/media/graphics/f2/3f/eldom_logo.png"/>
+</div>
+</div>
+<p class="product-description__brand text-bold">
+<span class="color-red">ELDOM</span>СТЕННИ КОНВЕКТОРИ
+            </p>
+<div class="product-description__intro">
+<h1>Стенни конвектори с електронно управление и Wi-Fi</h1>
+</div>
+<figure class="product-description__hero">
+<img alt="Стенен конвектор с електронно управление и Wi-Fi ELDOM RH20NW, 2000 W" class="product-description__hero-product" src="https://eldominvest.com/otoplenie/media/cache/9a/da/thumb6_convector-2p0kw_NHC.png"/>
+<img alt="Произведен в България - 7 години пълна гаранция" class="product-description__badge" src="https://eldominvest.com/otoplenie/media/graphics/81/d0/made_in_bulgaria_7.png"/>
+</figure>
+<div aria-label="Основни предимства" class="product-description__feature-grid">
+<img alt="Оптимална конвекция за максимален комфорт" loading="lazy" src="https://eldominvest.com/otoplenie/media/graphics/3b/13/acc_10.png"/>
+<img alt="Супер икономични" loading="lazy" src="https://eldominvest.com/otoplenie/media/graphics/16/c5/acc_2.png"/>
+<img alt="Wi-Fi управление" loading="lazy" src="https://eldominvest.com/otoplenie/media/graphics/a1/9b/acc_3.png"/>
+<img alt="Многофункционално меню" loading="lazy" src="https://eldominvest.com/otoplenie/media/graphics/b5/a4/acc_4.png"/>
+<img alt="SLIM design - дебелина само 59 мм" loading="lazy" src="https://eldominvest.com/otoplenie/media/graphics/d6/41/acc_11.png"/>
+<img alt="Сигурност - различни защити" loading="lazy" src="https://eldominvest.com/otoplenie/media/graphics/ea/da/acc_5.png"/>
+</div>
+<div class="product-description__row">
+<div class="product-description__media"><div aria-label="Wi-Fi управление" class="product-description__feature-icon" role="img">
+<svg aria-hidden="true" viewbox="0 0 100 100">
+<path d="M18 39c18-18 46-18 64 0"></path>
+<path d="M28 50c12-12 32-12 44 0"></path>
+<path d="M39 61c6-6 16-6 22 0"></path>
+<circle class="eldom-fill" cx="50" cy="72" r="4.5"></circle>
+<rect height="12" rx="4" width="36" x="32" y="78"></rect>
+<path d="M42 84h16"></path>
+</svg>
+</div></div>
+<div class="product-description__copy">
+<h2 class="background-red product-description__heading">Интелигентно електронно управление и Wi-Fi</h2>
+<div class="product-description__text">
+<p>Бърз и лесен достъп до уреда от всяка точка на света.</p>
+<p>Пълен контрол над работата на уреда - предоставя не просто възможност за включване и изключване, а дистанционно управление на абсолютно всички работни променливи и опции, предвидени в многофункционалното меню.</p>
+<p>Актуално състояние и статистически отчети за потреблението - системата следи и визуализира всички важни параметри, измервани от контролерите на уреда.</p>
+<p>Елегантен дисплей и интуитивно многофункционално меню.</p>
+<p class="text-bold">Безплатно приложение MyELDOM в Google Play и App Store.</p>
+</div>
+</div>
+</div>
+<hr/>
+<div class="product-description__row product-description__row--reverse">
+<div class="product-description__copy">
+<h2 class="background-red product-description__heading">Супер икономични</h2>
+<div class="product-description__text">
+<ul>
+<li>Седмичен програматор - програмирате режима на работа неограничено напред във времето, по дни и часове, с различна температура според Вашия индивидуален режим или според нискотарифните часови пояси.</li>
+<li>Функция „Отворен прозорец” - функция за разпознаване на отворен прозорец или врата, която временно изключва нагревателя и спестява значителни разходи на електроенергия.</li>
+<li>Режим „Сън” - този режим плавно понижава настроената температура в рамките на 2 часа и автоматично възстановява стандартния режим след още 5 часа.</li>
+<li>Режим „Отложен старт”.</li>
+<li>Прецизен електронен терморегулатор.</li>
+</ul>
+</div>
+</div>
+<div class="product-description__media"><div aria-label="Енергоспестяване и програмиране" class="product-description__feature-icon" role="img">
+<svg aria-hidden="true" viewbox="0 0 100 100">
+<circle cx="43" cy="47" r="23"></circle>
+<path d="M43 34v14l10 7"></path>
+<path d="M67 65c12-2 20 3 22 12-9 6-20 4-27-3"></path>
+<path d="M69 72c6 0 11 1 16 4"></path>
+<path d="M22 76h30"></path>
+<path d="M27 83h25"></path>
+</svg>
+</div></div>
+</div>
+<hr/>
+<div class="product-description__row">
+<div class="product-description__media"><div aria-label="Дълъг експлоатационен живот" class="product-description__feature-icon" role="img">
+<svg aria-hidden="true" viewbox="0 0 100 100">
+<path d="M50 15l28 10v21c0 20-12 32-28 40-16-8-28-20-28-40V25z"></path>
+<path d="M33 51c8-15 19-15 27 0 6 11 14 10 21-1"></path>
+<path d="M33 51c8 15 19 15 27 0"></path>
+</svg>
+</div></div>
+<div class="product-description__copy">
+<h2 class="background-red product-description__heading">Дълъг живот</h2>
+<div class="product-description__text">
+<p>По-добрият топлообмен на радиаторите води до намаляване на температурното натоварване на нагревателните елементи — най-добрата гаранция за дълъг експлоатационен живот на уреда.</p>
+</div>
+</div>
+</div>
+<hr/>
+<div class="product-description__row product-description__row--reverse">
+<div class="product-description__copy">
+<h2 class="background-red product-description__heading">Оптимална конвекция за максимален комфорт</h2>
+<div class="product-description__text">
+<p>Дължината на конвектора и подобрената му геометрия осигуряват циркулацията на по-голям въздушен поток, което води до по-бързото загряване на въздуха в помещението.</p>
+</div>
+</div>
+<div class="product-description__media"><div aria-label="Оптимална конвекция" class="product-description__feature-icon" role="img">
+<svg aria-hidden="true" viewbox="0 0 100 100">
+<path d="M25 76h50"></path>
+<path d="M31 68c-8-9-4-17 4-23 8-6 9-14 4-21"></path>
+<path d="M50 68c-8-9-4-17 4-23 8-6 9-14 4-21"></path>
+<path d="M69 68c-8-9-4-17 4-23 8-6 9-14 4-21"></path>
+<path d="M22 83h56"></path>
+</svg>
+</div></div>
+</div>
+<hr/>
+<div class="product-description__row">
+<div class="product-description__media"><div aria-label="Сигурност и защити" class="product-description__feature-icon" role="img">
+<svg aria-hidden="true" viewbox="0 0 100 100">
+<path d="M50 14l28 10v22c0 20-12 32-28 40-16-8-28-20-28-40V24z"></path>
+<path d="M36 50l9 9 20-21"></path>
+</svg>
+</div></div>
+<div class="product-description__copy">
+<h2 class="background-red product-description__heading">Защити</h2>
+<div class="product-description__text">
+<ul>
+<li>Защита при падане - автоматично се прекъсва електрическата верига.</li>
+<li>Защита от влага клас IP 24 - при спазване на инструкциите за експлоатация, тези отоплителни уреди безпроблемно могат да се монтират дори и в баня.</li>
+<li>Защита против замръзване - автоматично се включва уреда за кратко при температура в помещението под 7°С.</li>
+<li>Защита при прекъсване на ел. захранване - електронното управление запазва зададените настройки повече от 24 часа.</li>
+<li>Двустепенна защита от прегряване.</li>
+<li>Родителски контрол.</li>
+</ul>
+</div>
+</div>
+</div>
+<hr/>
+<div class="product-description__row product-description__row--reverse">
+<div class="product-description__copy">
+<h2 class="background-red product-description__heading">Удобство</h2>
+<div class="product-description__text">
+<ul>
+<li>SLIM дизайн - дебелина само 59 мм</li>
+<li>Можете да следите изразходваната от уреда електроенергия за последните седем дни.</li>
+<li>Съхраняване на информация за средната стайна температура по часове от последните четири дни.</li>
+<li>Интерфейс на различни езикови версии.</li>
+<li>Определяне яркостта на дисплея и плавно регулиране на силата на осветеност.</li>
+<li>Безшумна работа.</li>
+</ul>
+</div>
+</div>
+<div class="product-description__media"><div aria-label="SLIM дизайн и удобство" class="product-description__feature-icon" role="img">
+<svg aria-hidden="true" viewbox="0 0 100 100">
+<rect height="64" rx="5" width="30" x="35" y="18"></rect>
+<path d="M24 30h8M24 70h8M68 30h8M68 70h8"></path>
+<path d="M27 26l-7 4 7 4M73 26l7 4-7 4"></path>
+<path d="M27 66l-7 4 7 4M73 66l7 4-7 4"></path>
+<circle cx="50" cy="68" r="4"></circle>
+</svg>
+</div></div>
+</div>
+<div class="product-description__technical">
+<h2>Размери и характеристики</h2>
+<img alt="Размери и характеристики на стенните конвектори ELDOM" loading="lazy" src="https://eldominvest.com/otoplenie/media/graphics/b1/14/LP_Desktop_WallHeaters_Slim_Table.svg"/>
+</div>
+
+
+</div>
+</div>
+</div>
