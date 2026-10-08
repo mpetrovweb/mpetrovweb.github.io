@@ -1,16 +1,25 @@
 <style>
 .product-description__template {
-    --eldom-red: #fc6464;
-    --eldom-gray: #f0f0f0;
-    --eldom-text: #555;
-    --eldom-dark: #222;
-    --eldom-white: #fff;
-    --eldom-line: rgba(0, 0, 0, 0.10);
+    --eldom-red: #e30613;
+    --eldom-red-dark: #b9000b;
+    --eldom-red-soft: #fff0f1;
+    --eldom-bg: #f4f5f6;
+    --eldom-surface: #ffffff;
+    --eldom-surface-soft: #fafafa;
+    --eldom-text: #24272b;
+    --eldom-muted: #60656d;
+    --eldom-line: #dde1e5;
+    --eldom-silver: #d9dde1;
+    --eldom-shadow: 0 10px 30px rgba(26, 31, 36, 0.07);
+
     width: 100%;
     box-sizing: border-box;
     color: var(--eldom-text);
-    font-family: inherit;
-    line-height: 1.55;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 .product-description__template,
@@ -18,10 +27,10 @@
     box-sizing: border-box;
 }
 
-.product-description__template img {
+.product-description__template img,
+.product-description__template svg {
     display: block;
     max-width: 100%;
-    height: auto;
 }
 
 .product-description__template figure,
@@ -34,11 +43,12 @@
 }
 
 .product-description__template .background-gray {
-    background: var(--eldom-gray);
-    border-radius: 30px;
     max-width: 1070px;
     margin: 0 auto;
-    padding: 36px 40px 44px;
+    padding: 42px;
+    border: 1px solid #e5e7ea;
+    border-radius: 28px;
+    background: var(--eldom-bg);
 }
 
 .product-description__template .grid-container {
@@ -50,7 +60,7 @@
 }
 
 .product-description__template .background-red {
-    background: var(--eldom-red);
+    background: transparent;
 }
 
 .product-description__template .text-center {
@@ -71,22 +81,24 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 22px;
-    border-radius: 14px;
+    padding: 13px 22px;
+    border-radius: 12px;
     background: var(--eldom-red);
+    box-shadow: 0 8px 18px rgba(227, 6, 19, 0.16);
 }
 
 .product-description__template .product-description__source-logo img {
-    width: 190px;
+    width: 185px;
     max-width: 100%;
+    height: auto;
 }
 
 .product-description__template .product-description__brand {
-    margin: 0 0 34px;
-    color: var(--eldom-dark);
-    font-size: clamp(25px, 4vw, 38px);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    margin: 0 0 26px;
+    color: var(--eldom-text);
+    font-size: clamp(23px, 3.7vw, 35px);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
     text-align: center;
 }
 
@@ -95,41 +107,42 @@
 }
 
 .product-description__template .product-description__intro {
-    max-width: 760px;
-    margin: 0 auto 28px;
+    max-width: 790px;
+    margin: 0 auto 30px;
     text-align: center;
 }
 
 .product-description__template .product-description__intro h1 {
-    margin-bottom: 16px;
-    color: var(--eldom-dark);
-    font-size: clamp(26px, 4vw, 40px);
-    line-height: 1.15;
-    font-weight: 700;
-}
-
-.product-description__template .product-description__intro p {
     margin-bottom: 0;
-    font-size: 17px;
+    color: var(--eldom-text);
+    font-size: clamp(28px, 4.5vw, 42px);
+    line-height: 1.14;
+    letter-spacing: -0.035em;
+    font-weight: 750;
 }
 
 .product-description__template .product-description__hero {
     position: relative;
     overflow: hidden;
-    max-width: 850px;
+    max-width: 870px;
     min-height: 330px;
     margin: 0 auto 38px;
-    padding: 28px;
-    border-radius: 20px;
-    background: var(--eldom-white);
+    padding: 34px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid var(--eldom-line);
+    border-radius: 22px;
+    background:
+        radial-gradient(circle at 82% 20%, rgba(227, 6, 19, 0.07), transparent 32%),
+        var(--eldom-surface);
+    box-shadow: var(--eldom-shadow);
 }
 
 .product-description__template .product-description__hero-product {
     width: 100%;
     max-width: 650px;
+    height: auto;
     object-fit: contain;
 }
 
@@ -137,92 +150,106 @@
     position: absolute;
     right: 24px;
     bottom: 24px;
-    width: 118px;
-    height: 118px;
+    width: 116px;
+    height: 116px;
     max-width: none;
     aspect-ratio: 1 / 1;
     object-fit: contain;
+    filter: drop-shadow(0 7px 12px rgba(0, 0, 0, 0.10));
 }
 
 .product-description__template .product-description__feature-grid {
     display: grid;
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 10px;
+    gap: 12px;
     margin: 0 0 42px;
 }
 
 .product-description__template .product-description__feature-grid img {
     width: 100%;
-    border-radius: 16px;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: 0 7px 18px rgba(31, 36, 41, 0.08);
 }
 
 .product-description__template .product-description__row {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 36px;
+    grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+    gap: 34px;
     align-items: center;
-    padding: 22px 0;
+    margin: 18px 0;
+    padding: 30px;
+    border: 1px solid var(--eldom-line);
+    border-radius: 22px;
+    background: var(--eldom-surface);
+    box-shadow: 0 7px 22px rgba(31, 36, 41, 0.045);
+}
+
+.product-description__template .product-description__row--reverse {
+    grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
 }
 
 .product-description__template .product-description__media {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 270px;
-    padding: 30px;
+    min-height: 280px;
+    padding: 28px;
     overflow: hidden;
-    border-radius: 30px;
-    background: var(--eldom-white);
+    border: 1px solid #eceef0;
+    border-radius: 20px;
+    background:
+        radial-gradient(circle at center, #ffffff 0 54%, transparent 55%),
+        linear-gradient(145deg, #f7f7f8, #eef0f2);
 }
 
-.product-description__template .product-description__feature-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: min(220px, 72%);
-    aspect-ratio: 1 / 1;
+.product-description__template .product-description__media::after {
+    content: "";
+    position: absolute;
+    width: 78%;
+    height: 22px;
+    bottom: 17px;
+    left: 11%;
     border-radius: 50%;
-    background: rgba(252, 100, 100, 0.10);
-    color: var(--eldom-red);
+    background: rgba(37, 42, 47, 0.08);
+    filter: blur(12px);
+    pointer-events: none;
 }
 
-.product-description__template .product-description__feature-icon svg {
-    width: 58%;
-    height: 58%;
+.product-description__template .product-description__feature-svg {
+    position: relative;
+    z-index: 1;
+    width: min(240px, 82%);
+    height: auto;
     overflow: visible;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2.1;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-.product-description__template .product-description__feature-icon .eldom-fill {
-    fill: currentColor;
-    stroke: none;
 }
 
 .product-description__template .product-description__copy {
-    text-align: center;
+    text-align: left;
 }
 
 .product-description__template .product-description__heading {
-    display: inline-block;
+    position: relative;
+    display: block;
     width: auto;
     max-width: 100%;
-    margin: 0 auto 20px;
-    padding: 15px 20px;
-    border-radius: 10px;
-    color: var(--eldom-dark);
-    font-size: 25px;
-    line-height: 1.15;
-    font-weight: 700;
+    margin: 0 0 19px;
+    padding: 0 0 13px 18px;
+    border-left: 4px solid var(--eldom-red);
+    border-bottom: 1px solid #eceef0;
+    border-radius: 0;
+    color: var(--eldom-text);
+    font-size: clamp(22px, 2.8vw, 28px);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    font-weight: 750;
 }
 
 .product-description__template .product-description__text {
-    max-width: 500px;
-    margin: 0 auto;
-    color: var(--eldom-text);
+    max-width: none;
+    margin: 0;
+    color: var(--eldom-muted);
     font-size: 16px;
 }
 
@@ -234,65 +261,130 @@
     margin-bottom: 0;
 }
 
+.product-description__template .product-description__text .text-bold {
+    color: var(--eldom-text);
+}
+
 .product-description__template .product-description__text ul {
     margin: 0;
-    padding-left: 22px;
+    padding-left: 21px;
     text-align: left;
 }
 
 .product-description__template .product-description__text li {
     margin-bottom: 9px;
+    padding-left: 3px;
 }
 
 .product-description__template .product-description__text li:last-child {
     margin-bottom: 0;
 }
 
+.product-description__template .product-description__text li::marker {
+    color: var(--eldom-red);
+}
+
 .product-description__template hr {
-    height: 1px;
-    margin: 20px 0;
-    border: 0;
-    background: var(--eldom-line);
+    display: none;
 }
 
 .product-description__template .product-description__technical {
-    margin-top: 28px;
-    padding: 28px;
-    border-radius: 20px;
-    background: var(--eldom-white);
+    margin-top: 34px;
+    padding: 30px;
+    border: 1px solid var(--eldom-line);
+    border-radius: 22px;
+    background: var(--eldom-surface);
+    box-shadow: 0 7px 22px rgba(31, 36, 41, 0.045);
 }
 
 .product-description__template .product-description__technical h2 {
     margin-bottom: 24px;
-    color: var(--eldom-dark);
+    color: var(--eldom-text);
     font-size: clamp(24px, 3.4vw, 32px);
     line-height: 1.2;
+    letter-spacing: -0.025em;
     text-align: center;
 }
 
 .product-description__template .product-description__technical img {
     width: 100%;
+    height: auto;
+}
+
+/* SVG medallion styling based on the ELDOM feature graphics */
+.product-description__template .eldom-medal-shadow {
+    filter: drop-shadow(0 9px 11px rgba(35, 39, 43, 0.16));
+}
+
+.product-description__template .eldom-medal-outer {
+    fill: #f3f4f5;
+    stroke: #c7cbd0;
+    stroke-width: 4;
+}
+
+.product-description__template .eldom-medal-inner {
+    fill: #ffffff;
+    stroke: #e4e6e8;
+    stroke-width: 2;
+}
+
+.product-description__template .eldom-icon-red {
+    fill: var(--eldom-red);
+}
+
+.product-description__template .eldom-icon-red-stroke {
+    fill: none;
+    stroke: var(--eldom-red);
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.product-description__template .eldom-icon-white-stroke {
+    fill: none;
+    stroke: #ffffff;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.product-description__template .eldom-icon-white {
+    fill: #ffffff;
 }
 
 @media (max-width: 900px) {
     .product-description__template .background-gray {
-        padding: 30px 26px 36px;
+        padding: 32px 26px 36px;
     }
 
     .product-description__template .product-description__feature-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
-    .product-description__template .product-description__row {
+    .product-description__template .product-description__row,
+    .product-description__template .product-description__row--reverse {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
         gap: 24px;
+        padding: 24px;
     }
 
+    .product-description__template .product-description__row--reverse .product-description__copy {
+        order: 2;
     }
+
+    .product-description__template .product-description__row--reverse .product-description__media {
+        order: 1;
+    }
+}
 
 @media (max-width: 680px) {
+    .product-description__template {
+        font-size: 15px;
+    }
+
     .product-description__template .background-gray {
+        padding: 24px 14px 28px;
         border-radius: 20px;
-        padding: 24px 16px 28px;
     }
 
     .product-description__template .product-description__source-logo img {
@@ -300,18 +392,15 @@
     }
 
     .product-description__template .product-description__brand {
-        margin-bottom: 26px;
-    }
-
-    .product-description__template .product-description__intro {
         margin-bottom: 22px;
+        font-size: 24px;
     }
 
     .product-description__template .product-description__hero {
         min-height: 230px;
         margin-bottom: 28px;
         padding: 18px;
-        border-radius: 16px;
+        border-radius: 18px;
     }
 
     .product-description__template .product-description__badge {
@@ -324,60 +413,54 @@
     .product-description__template .product-description__feature-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
-        margin-bottom: 30px;
+        margin-bottom: 28px;
     }
 
     .product-description__template .product-description__feature-grid img {
-        border-radius: 12px;
+        border-radius: 11px;
     }
 
-    .product-description__template .product-description__row {
+    .product-description__template .product-description__row,
+    .product-description__template .product-description__row--reverse {
         grid-template-columns: 1fr;
-        gap: 18px;
-        padding: 16px 0;
-    }
-
-    .product-description__template .product-description__row--reverse .product-description__copy {
-        order: 2;
-    }
-
-    .product-description__template .product-description__row--reverse .product-description__media {
-        order: 1;
+        gap: 20px;
+        margin: 14px 0;
+        padding: 18px;
+        border-radius: 18px;
     }
 
     .product-description__template .product-description__media {
         min-height: 210px;
         padding: 22px;
-        border-radius: 20px;
+        border-radius: 16px;
     }
 
-    .product-description__template .product-description__feature-icon {
-        width: min(170px, 62vw);
+    .product-description__template .product-description__feature-svg {
+        width: min(185px, 65vw);
+    }
+
+    .product-description__template .product-description__copy {
+        text-align: left;
     }
 
     .product-description__template .product-description__heading {
         margin-bottom: 15px;
-        padding: 12px 15px;
-        font-size: 21px;
+        padding: 0 0 11px 14px;
+        font-size: 22px;
     }
 
     .product-description__template .product-description__text {
         font-size: 15px;
     }
 
-    .product-description__template hr {
-        margin: 14px 0;
-    }
-
     .product-description__template .product-description__technical {
-        padding: 16px;
+        margin-top: 26px;
+        padding: 17px;
+        border-radius: 18px;
     }
-
-    }
-
-@media (max-width: 420px) {
-    }
+}
 </style>
+
 <div class="product-description__template">
 <div class="background-gray">
 <div class="grid-container">
@@ -405,16 +488,19 @@
 <img alt="Сигурност - различни защити" loading="lazy" src="https://eldominvest.com/otoplenie/media/graphics/ea/da/acc_5.png"/>
 </div>
 <div class="product-description__row">
-<div class="product-description__media"><div aria-label="Wi-Fi управление" class="product-description__feature-icon" role="img">
-<svg aria-hidden="true" viewbox="0 0 100 100">
-<path d="M18 39c18-18 46-18 64 0"></path>
-<path d="M28 50c12-12 32-12 44 0"></path>
-<path d="M39 61c6-6 16-6 22 0"></path>
-<circle class="eldom-fill" cx="50" cy="72" r="4.5"></circle>
-<rect height="12" rx="4" width="36" x="32" y="78"></rect>
-<path d="M42 84h16"></path>
-</svg>
-</div></div>
+<div class="product-description__media"><svg aria-label="Wi-Fi управление" class="product-description__feature-svg" role="img" viewbox="0 0 260 260">
+<g class="eldom-medal-shadow">
+<circle class="eldom-medal-outer" cx="130" cy="126" r="102"></circle>
+<circle class="eldom-medal-inner" cx="130" cy="126" r="91"></circle>
+</g>
+<circle class="eldom-icon-red" cx="121" cy="119" r="52"></circle>
+<path class="eldom-icon-white-stroke" d="M88 108c18-18 47-18 65 0"></path>
+<path class="eldom-icon-white-stroke" d="M99 121c12-12 32-12 44 0"></path>
+<path class="eldom-icon-white-stroke" d="M111 134c6-6 14-6 20 0"></path>
+<circle class="eldom-icon-white" cx="121" cy="147" r="5"></circle>
+<circle cx="169" cy="153" fill="#fff" r="28" stroke="#e30613" stroke-width="5"></circle>
+<path class="eldom-icon-red-stroke" d="M142 153h54M169 126c-11 10-16 18-16 27s5 17 16 27M169 126c11 10 16 18 16 27s-5 17-16 27M145 141h48M145 165h48"></path>
+</svg></div>
 <div class="product-description__copy">
 <h2 class="background-red product-description__heading">Интелигентно електронно управление и Wi-Fi</h2>
 <div class="product-description__text">
@@ -440,26 +526,104 @@
 </ul>
 </div>
 </div>
-<div class="product-description__media"><div aria-label="Енергоспестяване и програмиране" class="product-description__feature-icon" role="img">
-<svg aria-hidden="true" viewbox="0 0 100 100">
-<circle cx="43" cy="47" r="23"></circle>
-<path d="M43 34v14l10 7"></path>
-<path d="M67 65c12-2 20 3 22 12-9 6-20 4-27-3"></path>
-<path d="M69 72c6 0 11 1 16 4"></path>
-<path d="M22 76h30"></path>
-<path d="M27 83h25"></path>
-</svg>
-</div></div>
+<div class="product-description__media"><svg aria-label="Икономична работа" class="product-description__feature-svg" role="img" viewbox="0 0 260 260">
+<g class="eldom-medal-shadow">
+<circle class="eldom-medal-outer" cx="130" cy="126" r="102"></circle>
+<circle class="eldom-medal-inner" cx="130" cy="126" r="91"></circle>
+</g>
+<g transform="translate(17 16) scale(0.86)">
+<!-- Smooth rounded pig body -->
+<ellipse cx="130" cy="142" fill="#e30613" rx="69" ry="48"></ellipse>
+<!-- Head / snout transition -->
+<path d="
+      M166 109
+      C183 112 196 123 201 137
+      C204 145 203 154 198 162
+      C190 175 175 183 158 187
+      L156 170
+      C172 167 184 160 188 150
+      C192 141 188 130 180 123
+      C176 119 171 116 166 114
+      Z" fill="#e30613"></path>
+<!-- Snout -->
+<rect fill="#e30613" height="23" rx="8" width="23" x="191" y="134"></rect>
+<!-- Ear -->
+<path d="M145 104 L158 84 L170 110 Z" fill="#e30613"></path>
+<!-- Legs -->
+<rect fill="#e30613" height="31" rx="6" width="19" x="93" y="176"></rect>
+<rect fill="#e30613" height="31" rx="6" width="19" x="148" y="176"></rect>
+<!-- Eye -->
+<circle cx="177" cy="129" fill="#fff" r="4"></circle>
+<!-- Coin slot -->
+<rect fill="#fff" height="6" rx="3" width="38" x="111" y="106"></rect>
+<!-- Smooth curly tail -->
+<path class="eldom-icon-red-stroke" d="M63 139
+         C48 129 37 138 40 148
+         C43 158 55 160 62 153
+         C67 148 64 141 58 140" stroke-width="5"></path>
+<!-- Lightning badge -->
+<circle cx="116" cy="78" fill="#e30613" r="24"></circle>
+<circle cx="116" cy="78" fill="#fff" r="17"></circle>
+<path d="M119 61l-12 19h10l-4 15 15-22h-9z" fill="#e30613"></path>
+</g>
+</svg></div>
 </div>
 <hr/>
 <div class="product-description__row">
-<div class="product-description__media"><div aria-label="Дълъг експлоатационен живот" class="product-description__feature-icon" role="img">
-<svg aria-hidden="true" viewbox="0 0 100 100">
-<path d="M50 15l28 10v21c0 20-12 32-28 40-16-8-28-20-28-40V25z"></path>
-<path d="M33 51c8-15 19-15 27 0 6 11 14 10 21-1"></path>
-<path d="M33 51c8 15 19 15 27 0"></path>
-</svg>
-</div></div>
+<div class="product-description__media"><svg aria-label="Дълъг живот и гаранция" class="product-description__feature-svg" role="img" viewbox="0 0 260 260">
+<g class="eldom-medal-shadow">
+<circle class="eldom-medal-outer" cx="130" cy="126" r="102"></circle>
+<circle class="eldom-medal-inner" cx="130" cy="126" r="91"></circle>
+</g>
+<!-- Deliberately reduced to ~64% of the previous visual footprint -->
+<g transform="translate(45 42) scale(0.64)">
+<!-- Shield -->
+<path d="
+      M132 43
+      C149 57 169 66 190 70
+      L190 112
+      C190 145 170 169 132 187
+      C94 169 74 145 74 112
+      L74 70
+      C95 66 115 57 132 43
+      Z" fill="#e30613"></path>
+<!-- White inner shield -->
+<path d="
+      M132 58
+      C147 68 162 75 176 78
+      L176 111
+      C176 136 161 154 132 169
+      C103 154 88 136 88 111
+      L88 78
+      C102 75 117 68 132 58
+      Z" fill="#fff"></path>
+<!-- Clock -->
+<circle cx="132" cy="111" fill="none" r="34" stroke="#e30613" stroke-width="7"></circle>
+<path d="M132 111V91M132 111l16 12" fill="none" stroke="#e30613" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"></path>
+<path d="M113 83l-8 9M151 83l8 9" fill="none" stroke="#e30613" stroke-linecap="round" stroke-linejoin="round" stroke-width="6"></path>
+<!-- Smaller supporting hand -->
+<path d="
+      M72 177
+      L95 167
+      C101 164 107 164 113 166
+      L142 176
+      C150 179 153 185 150 191
+      C147 196 141 198 135 196
+      L117 190
+      L144 199
+      L180 184
+      C188 181 195 184 197 190
+      C199 196 195 201 189 204
+      L153 221
+      C148 223 143 224 138 222
+      L101 212
+      L76 221
+      Z" fill="#e30613"></path>
+<!-- Wrist/cuff -->
+<rect fill="#e30613" height="56" rx="7" width="18" x="58" y="170"></rect>
+<rect fill="#fff" height="44" opacity="0.92" rx="4" width="10" x="62" y="176"></rect>
+</g>
+</svg></div>
 <div class="product-description__copy">
 <h2 class="background-red product-description__heading">Дълъг живот</h2>
 <div class="product-description__text">
@@ -475,24 +639,34 @@
 <p>Дължината на конвектора и подобрената му геометрия осигуряват циркулацията на по-голям въздушен поток, което води до по-бързото загряване на въздуха в помещението.</p>
 </div>
 </div>
-<div class="product-description__media"><div aria-label="Оптимална конвекция" class="product-description__feature-icon" role="img">
-<svg aria-hidden="true" viewbox="0 0 100 100">
-<path d="M25 76h50"></path>
-<path d="M31 68c-8-9-4-17 4-23 8-6 9-14 4-21"></path>
-<path d="M50 68c-8-9-4-17 4-23 8-6 9-14 4-21"></path>
-<path d="M69 68c-8-9-4-17 4-23 8-6 9-14 4-21"></path>
-<path d="M22 83h56"></path>
-</svg>
-</div></div>
+<div class="product-description__media"><svg aria-label="Оптимална конвекция" class="product-description__feature-svg" role="img" viewbox="0 0 260 260">
+<g class="eldom-medal-shadow">
+<circle class="eldom-medal-outer" cx="130" cy="126" r="102"></circle>
+<circle class="eldom-medal-inner" cx="130" cy="126" r="91"></circle>
+</g>
+<rect fill="#e30613" height="38" rx="5" width="116" x="72" y="124"></rect>
+<rect fill="#fff" height="14" rx="2" width="7" x="84" y="136"></rect>
+<rect fill="#fff" height="14" rx="2" width="7" x="100" y="136"></rect>
+<rect fill="#fff" height="14" rx="2" width="7" x="116" y="136"></rect>
+<rect fill="#fff" height="14" rx="2" width="7" x="132" y="136"></rect>
+<rect fill="#fff" height="14" rx="2" width="7" x="148" y="136"></rect>
+<rect fill="#fff" height="14" rx="2" width="7" x="164" y="136"></rect>
+<path class="eldom-icon-red-stroke" d="M99 112V82M99 82l-10 11M99 82l10 11"></path>
+<path class="eldom-icon-red-stroke" d="M161 112V82M161 82l-10 11M161 82l10 11"></path>
+<path class="eldom-icon-red-stroke" d="M120 111c-8-10 8-16 0-27-7-10 8-15 0-26M140 111c-8-10 8-16 0-27-7-10 8-15 0-26"></path>
+</svg></div>
 </div>
 <hr/>
 <div class="product-description__row">
-<div class="product-description__media"><div aria-label="Сигурност и защити" class="product-description__feature-icon" role="img">
-<svg aria-hidden="true" viewbox="0 0 100 100">
-<path d="M50 14l28 10v22c0 20-12 32-28 40-16-8-28-20-28-40V24z"></path>
-<path d="M36 50l9 9 20-21"></path>
-</svg>
-</div></div>
+<div class="product-description__media"><svg aria-label="Сигурност и защити" class="product-description__feature-svg" role="img" viewbox="0 0 260 260">
+<g class="eldom-medal-shadow">
+<circle class="eldom-medal-outer" cx="130" cy="126" r="102"></circle>
+<circle class="eldom-medal-inner" cx="130" cy="126" r="91"></circle>
+</g>
+<path class="eldom-icon-red" d="M130 59c23 17 45 21 61 22v43c0 37-24 62-61 79-37-17-61-42-61-79V81c16-1 38-5 61-22z"></path>
+<path d="M130 72c18 12 34 16 49 18v34c0 27-17 48-49 64-32-16-49-37-49-64V90c15-2 31-6 49-18z" fill="#fff"></path>
+<path class="eldom-icon-red-stroke" d="M103 127l18 18 38-42" stroke-width="8"></path>
+</svg></div>
 <div class="product-description__copy">
 <h2 class="background-red product-description__heading">Защити</h2>
 <div class="product-description__text">
@@ -522,22 +696,28 @@
 </ul>
 </div>
 </div>
-<div class="product-description__media"><div aria-label="SLIM дизайн и удобство" class="product-description__feature-icon" role="img">
-<svg aria-hidden="true" viewbox="0 0 100 100">
-<rect height="64" rx="5" width="30" x="35" y="18"></rect>
-<path d="M24 30h8M24 70h8M68 30h8M68 70h8"></path>
-<path d="M27 26l-7 4 7 4M73 26l7 4-7 4"></path>
-<path d="M27 66l-7 4 7 4M73 66l7 4-7 4"></path>
-<circle cx="50" cy="68" r="4"></circle>
-</svg>
-</div></div>
+<div class="product-description__media"><svg aria-label="SLIM дизайн" class="product-description__feature-svg" role="img" viewbox="0 0 260 260">
+<g class="eldom-medal-shadow">
+<circle class="eldom-medal-outer" cx="130" cy="126" r="102"></circle>
+<circle class="eldom-medal-inner" cx="130" cy="126" r="91"></circle>
+</g>
+<rect fill="#e30613" height="108" rx="4" width="12" x="124" y="72"></rect>
+<circle cx="130" cy="84" fill="#fff" r="2.5"></circle>
+<circle cx="130" cy="96" fill="#fff" r="2.5"></circle>
+<circle cx="130" cy="108" fill="#fff" r="2.5"></circle>
+<circle cx="130" cy="120" fill="#fff" r="2.5"></circle>
+<circle cx="130" cy="132" fill="#fff" r="2.5"></circle>
+<circle cx="130" cy="144" fill="#fff" r="2.5"></circle>
+<circle cx="130" cy="156" fill="#fff" r="2.5"></circle>
+<circle cx="130" cy="168" fill="#fff" r="2.5"></circle>
+<path class="eldom-icon-red-stroke" d="M74 98l28 28-28 28M94 98l28 28-28 28"></path>
+<path class="eldom-icon-red-stroke" d="M186 98l-28 28 28 28M166 98l-28 28 28 28"></path>
+</svg></div>
 </div>
 <div class="product-description__technical">
 <h2>Размери и характеристики</h2>
 <img alt="Размери и характеристики на стенните конвектори ELDOM" loading="lazy" src="https://eldominvest.com/otoplenie/media/graphics/b1/14/LP_Desktop_WallHeaters_Slim_Table.svg"/>
 </div>
-
-
 </div>
 </div>
 </div>
