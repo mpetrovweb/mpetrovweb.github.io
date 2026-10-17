@@ -127,7 +127,6 @@
     max-width: 870px;
     min-height: 330px;
     margin: 0 auto 38px;
-    padding: 34px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -346,6 +345,10 @@
     fill: #ffffff;
 }
 
+.hero-video video {
+    max-width: 100%;
+}
+
 @media (max-width: 900px) {
     .product-description__template .background-gray {
         padding: 32px 26px 36px;
@@ -469,10 +472,16 @@
 <div class="product-description__intro">
 <h1>Стенни конвектори с електронно управление и Wi-Fi</h1>
 </div>
-<figure class="product-description__hero">
+<div class="product-description__hero hero-video" data-video="assets/video/Wall">
+    <video autoplay="" loop="" muted="" playsinline="">
+        <source src="https://eldominvest.com/otoplenie/assets/video/Wall.mp4" type="video/mp4">
+        <source src="https://eldominvest.com/otoplenie/assets/video/Wall.webm" type="video/webm">
+    </video>
+</div>
+<!-- <figure class="product-description__hero">
 <img alt="Стенен конвектор с електронно управление и Wi-Fi ELDOM RH20NW, 2000 W" class="product-description__hero-product" src="https://eldominvest.com/otoplenie/media/cache/9a/da/thumb6_convector-2p0kw_NHC.png"/>
 <img alt="Произведен в България - 7 години пълна гаранция" class="product-description__badge" src="https://eldominvest.com/otoplenie/media/graphics/81/d0/made_in_bulgaria_7.png"/>
-</figure>
+</figure> -->
 <div aria-label="Основни предимства" class="product-description__feature-grid">
 <img alt="Оптимална конвекция за максимален комфорт" loading="lazy" src="https://eldominvest.com/otoplenie/media/graphics/3b/13/acc_10.png"/>
 <img alt="Супер икономични" loading="lazy" src="https://eldominvest.com/otoplenie/media/graphics/16/c5/acc_2.png"/>
